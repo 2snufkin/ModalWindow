@@ -12,6 +12,15 @@ for (let i= 0; i<buttonEL.length; i++) {
 exit.addEventListener('click', close);
 overlay.addEventListener('click', close);
 
+document.addEventListener('keydown', (event)=>{
+ //the actions will be taken no matter which key I press. So I need to be more specific
+    if(event.key === "Escape" && !popup.classList.contains('Hidden')) {
+        close();
+
+    }
+
+})
+
 
  function close(){
      popup.classList.add('hidden');
